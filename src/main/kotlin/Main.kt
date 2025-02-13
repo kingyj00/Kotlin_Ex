@@ -1,8 +1,9 @@
 package com.ll
 
-data class Person(val name: String, val age: Int)
+fun String.greet(): String {
+    return "Hello, $this!"
+}
 
 fun main() {
-    val person = Person("Alice", 30)
-    println(person) // 자동 생성된 toString() 사용
+    println("Alice".greet()) // 확장 함수 사용
 }
