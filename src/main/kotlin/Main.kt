@@ -1,12 +1,9 @@
 package com.ll
 
-class Person(val name: String) {
-    fun greet() {
-        println("Hello, my name is $name")
-    }
-}
-
 fun main() {
-    val person = Person("Alice")
-    person.greet()
+    val names = listOf("Alice", "Bob", "Charlie") // 불변 리스트
+
+    for (name in names) {
+        println(name)
+    }
 }
