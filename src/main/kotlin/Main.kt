@@ -1,10 +1,7 @@
 package com.ll
 
 fun main() {
-    val number = 15
-
-    // if-else를 표현식으로 사용 가능
-    val result = if (number % 2 == 0) "Even Number" else "Odd Number"
-
-    println(result)
+    for (i in 0 until 5) { // 0부터 4까지 반복
+        println("Count: $i")
+    }
 }
