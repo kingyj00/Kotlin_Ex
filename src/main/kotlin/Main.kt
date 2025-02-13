@@ -1,9 +1,8 @@
 package com.ll
 
 fun main() {
-    val ages = mapOf("Alice" to 25, "Bob" to 30, "Charlie" to 35) // 불변 맵
+    val name: String? = null // nullable 타입
 
-    for ((name, age) in ages) {
-        println("$name is $age years old.")
-    }
+    println(name?.length ?: "Name is null") // 안전한 호출 연산자와 엘비스 연산자 사용
+
 }
