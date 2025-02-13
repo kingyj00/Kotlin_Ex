@@ -1,8 +1,7 @@
 package com.ll
 
 fun main() {
-    val name: String? = null // nullable 타입
+    val names = listOf("Alice", "Bob", "Charlie")
 
-    println(name?.length ?: "Name is null") // 안전한 호출 연산자와 엘비스 연산자 사용
-
+    names.forEach { println("Hello, $it") }
 }

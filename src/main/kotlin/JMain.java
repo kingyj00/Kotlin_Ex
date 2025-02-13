@@ -1,11 +1,10 @@
+import java.util.Arrays;
+import java.util.List;
+
 public class JMain {
     public static void main(String[] args) {
-        String name = null;
+        List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
 
-        if (name != null) {
-            System.out.println(name.length());
-        } else {
-            System.out.println("Name is null");
-        }
+        names.forEach(name -> System.out.println("Hello, " + name));
     }
 }
