@@ -1,10 +1,25 @@
-public class Main {
-    public static void main(String[] args) {
-        Object obj = "Hello";
+class Main {
+    String name;
+    int age;
 
-        if (obj instanceof String) {
-            String str = (String) obj; // 명시적 캐스팅 필요
-            System.out.println(str.length());
-        }
+    public Main setName(String name) {
+        this.name = name;
+        return this;
+    }
+
+    public Main setAge(int age) {
+        this.age = age;
+        return this;
+    }
+
+    public void printInfo() {
+        System.out.println(name + " is " + age + " years old.");
+    }
+
+    public static void main(String[] args) {
+        Main Main = new Main()
+                .setName("Alice")
+                .setAge(30);
+        Main.printInfo();
     }
 }

@@ -1,9 +1,19 @@
 package com.ll
 
-fun main() {
-    val obj: Any = "Hello"
+class Person {
+    var name: String = ""
+    var age: Int = 0
 
-    if (obj is String) { // 스마트 캐스트 적용
-        println(obj.length) // 자동으로 String으로 캐스팅됨
+    fun printInfo() {
+        println("$name is $age years old.")
     }
+}
+
+fun main() {
+    val person = Person().apply {
+        name = "Alice"
+        age = 30
+    }
+
+    person.printInfo()
 }
