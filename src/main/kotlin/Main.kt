@@ -1,8 +1,13 @@
 package com.ll
 
-fun main() {
-    val name = "Alice"
-    val age = 25
+import java.io.File
+import java.nio.file.Files
+import java.nio.file.StandardCopyOption
 
-    println("My name is $name and I am $age years old.") // 문자열 템플릿 사용
+fun main() {
+    copy("a.txt", "a_copy.txt")
+}
+
+fun copy(source: String, target: String) {
+    Files.copy(File(source).toPath(), File(target).toPath(), StandardCopyOption.REPLACE_EXISTING)
 }
