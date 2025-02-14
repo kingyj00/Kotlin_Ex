@@ -1,9 +1,9 @@
 package com.ll
 
 fun main() {
-    val name: String? = null
-
-    name?.let {
-        println("Length: ${it.length}")
+    val message = "Hello".also {
+        println("Before: $it")
+    }.uppercase().also {
+        println("After: $it")
     }
 }

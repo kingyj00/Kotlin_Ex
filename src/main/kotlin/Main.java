@@ -1,10 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        String name = null;
+        String message = "Hello";
 
-        if (name != null) {
-            int length = name.length();
-            System.out.println("Length: " + length);
-        }
+        System.out.println("Before: " + message);
+        message = message.toUpperCase();
+        System.out.println("After: " + message);
     }
 }
