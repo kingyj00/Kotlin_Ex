@@ -1,15 +1,12 @@
 package com.ll
 
-class Example {
-    lateinit var value: String // 초기화 없이 선언 가능
-
-    fun printValue() {
-        println(value) // 초기화 전 접근하면 예외 발생
-    }
+val lazyValue: String by lazy {
+    println("Initializing...") // 최초 접근 시 실행
+    "Hello, Lazy!"
 }
 
 fun main() {
-    val example = Example()
-    example.value = "Hello, Kotlin!" // 나중에 값 설정
-    example.printValue()
+    println("Before accessing lazyValue")
+    println(lazyValue) // 첫 호출 시 초기화됨
+    println(lazyValue) // 이후에는 캐싱된 값 사용
 }
