@@ -1,11 +1,18 @@
 package com.ll
 
-object Singleton {
-    fun showMessage() {
-        println("Hello from Singleton!")
+open class Animal { // 이제 상속 가능
+    open fun makeSound() {
+        println("Some generic animal sound")
+    }
+}
+
+class Dog : Animal() {
+    override fun makeSound() { // 메서드 오버라이딩 가능
+        println("Bark! Bark!")
     }
 }
 
 fun main() {
-    Singleton.showMessage() // 인스턴스 생성 없이 바로 사용 가능
+    val dog = Dog()
+    dog.makeSound() // 출력: Bark! Bark!
 }
