@@ -1,9 +1,10 @@
 package com.ll
 
-fun String.greet(): String {
-    return "Hello, $this!"
+fun sayHello(name: String = "Guest") {
+    println("Hello, $name")
 }
 
 fun main() {
-    println("Alice".greet()) // 확장 함수 사용
+    sayHello() // 기본값 사용
+    sayHello("Alice")
 }
