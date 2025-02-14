@@ -1,12 +1,14 @@
 package com.ll
 
-val lazyValue: String by lazy {
-    println("Initializing...") // 최초 접근 시 실행
-    "Hello, Lazy!"
+class MathUtils {
+    companion object {
+        const val PI = 3.14159
+
+        fun square(x: Int) = x * x
+    }
 }
 
 fun main() {
-    println("Before accessing lazyValue")
-    println(lazyValue) // 첫 호출 시 초기화됨
-    println(lazyValue) // 이후에는 캐싱된 값 사용
+    println("PI: ${MathUtils.PI}")
+    println("Square of 4: ${MathUtils.square(4)}")
 }

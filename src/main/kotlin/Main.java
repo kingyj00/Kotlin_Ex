@@ -1,20 +1,14 @@
-class Main {
-    private String value;
+class MathUtils {
+    public static final double PI = 3.14159;
 
-    public void setValue(String value) {
-        this.value = value;
+    public static int square(int x) {
+        return x * x;
     }
+}
 
-    public String getValue() {
-        if (value == null) {
-            throw new IllegalStateException("Value is not initialized");
-        }
-        return value;
-    }
-
+public class Main {
     public static void main(String[] args) {
-        Main example = new Main();
-        example.setValue("Hello, Kotlin!");
-        System.out.println(example.getValue());
+        System.out.println("PI: " + MathUtils.PI);
+        System.out.println("Square of 4: " + MathUtils.square(4));
     }
 }
