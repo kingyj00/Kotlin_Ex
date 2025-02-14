@@ -1,8 +1,10 @@
 public class Main {
     public static void main(String[] args) {
-        String name = null;
-        String displayName = (name != null) ? name : "Guest";
+        Object obj = "Hello";
 
-        System.out.println("Hello, " + displayName);
+        if (obj instanceof String) {
+            String str = (String) obj; // 명시적 캐스팅 필요
+            System.out.println(str.length());
+        }
     }
 }

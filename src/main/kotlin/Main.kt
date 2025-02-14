@@ -1,9 +1,9 @@
 package com.ll
 
 fun main() {
-    val name: String? = null
-    val displayName = name ?: "Guest" // 엘비스 연산자로 기본값 제공
+    val obj: Any = "Hello"
 
-    println("Hello, $displayName")
+    if (obj is String) { // 스마트 캐스트 적용
+        println(obj.length) // 자동으로 String으로 캐스팅됨
+    }
 }
-
