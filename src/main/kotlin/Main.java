@@ -1,22 +1,15 @@
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class Main {
     public static void main(String[] args) {
-        int day = 3;
-        String dayName;
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6);
 
-        switch (day) {
-            case 1:
-                dayName = "Monday";
-                break;
-            case 2:
-                dayName = "Tuesday";
-                break;
-            case 3:
-                dayName = "Wednesday";
-                break;
-            default:
-                dayName = "Invalid Day";
-        }
+        List<Integer> evenNumbers = numbers.stream()
+                .filter(n -> n % 2 == 0)
+                .collect(Collectors.toList());
 
-        System.out.println("Day: " + dayName);
+        System.out.println(evenNumbers);
     }
 }
