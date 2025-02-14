@@ -1,10 +1,11 @@
 package com.ll
 
-fun sayHello(name: String = "Guest") {
-    println("Hello, $name")
+object Singleton {
+    fun showMessage() {
+        println("Hello from Singleton!")
+    }
 }
 
 fun main() {
-    sayHello() // 기본값 사용
-    sayHello("Alice")
+    Singleton.showMessage()
 }
