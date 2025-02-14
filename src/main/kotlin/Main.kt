@@ -1,14 +1,11 @@
 package com.ll
 
-class MathUtils {
-    companion object {
-        const val PI = 3.14159
-
-        fun square(x: Int) = x * x
+object Singleton {
+    fun showMessage() {
+        println("Hello from Singleton!")
     }
 }
 
 fun main() {
-    println("PI: ${MathUtils.PI}")
-    println("Square of 4: ${MathUtils.square(4)}")
+    Singleton.showMessage() // 인스턴스 생성 없이 바로 사용 가능
 }

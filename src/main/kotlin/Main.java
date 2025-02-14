@@ -1,14 +1,17 @@
-class MathUtils {
-    public static final double PI = 3.14159;
+class Main {
+    private static final Main INSTANCE = new Main();
 
-    public static int square(int x) {
-        return x * x;
+    private Main() {}
+
+    public static Main getInstance() {
+        return INSTANCE;
     }
-}
 
-public class Main {
+    public void showMessage() {
+        System.out.println("Hello from Singleton!");
+    }
+
     public static void main(String[] args) {
-        System.out.println("PI: " + MathUtils.PI);
-        System.out.println("Square of 4: " + MathUtils.square(4));
+        Main.getInstance().showMessage();
     }
 }
