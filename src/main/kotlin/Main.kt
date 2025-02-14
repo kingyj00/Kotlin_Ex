@@ -1,9 +1,14 @@
 package com.ll
 
+import java.util.function.Consumer
+import java.util.stream.Collectors
+
 fun main() {
-    val numbers = listOf(1, 2, 3, 4, 5, 6)
+    val names: List<String> = mutableListOf("Alice", "Bob", "Charlie")
 
-    val evenNumbers = numbers.filter { it % 2 == 0 }
+    val greetings = names.stream()
+        .map { name: String -> "Hello, $name" }
+        .collect(Collectors.toList())
 
-    println(evenNumbers)
+    greetings.forEach(Consumer { x: String? -> println(x) })
 }

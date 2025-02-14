@@ -4,12 +4,12 @@ import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
-        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6);
+        List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
 
-        List<Integer> evenNumbers = numbers.stream()
-                .filter(n -> n % 2 == 0)
+        List<String> greetings = names.stream()
+                .map(name -> "Hello, " + name)
                 .collect(Collectors.toList());
 
-        System.out.println(evenNumbers);
+        greetings.forEach(System.out::println);
     }
 }
