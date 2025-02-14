@@ -1,14 +1,9 @@
 package com.ll
 
-import java.util.function.Consumer
-import java.util.stream.Collectors
-
 fun main() {
-    val names: List<String> = mutableListOf("Alice", "Bob", "Charlie")
+    val name: String? = null
+    val displayName = name ?: "Guest" // 엘비스 연산자로 기본값 제공
 
-    val greetings = names.stream()
-        .map { name: String -> "Hello, $name" }
-        .collect(Collectors.toList())
-
-    greetings.forEach(Consumer { x: String? -> println(x) })
+    println("Hello, $displayName")
 }
+
