@@ -2,13 +2,9 @@ class Person {
     private String name;
     private int age;
 
-    // 생성자
     public Person(String name, int age) {
         this.name = name;
         this.age = age;
-    }
-
-    public void introduce() {
-        System.out.println("Hi, I'm " + name + " and I'm " + age + " years old.");
+        System.out.println("Person 객체가 생성되었습니다: " + name + ", " + age);
     }
 }
