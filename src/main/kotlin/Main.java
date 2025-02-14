@@ -1,17 +1,3 @@
-class Main {
-    private static final Main INSTANCE = new Main();
-
-    private Main() {}
-
-    public static Main getInstance() {
-        return INSTANCE;
-    }
-
-    public void showMessage() {
-        System.out.println("Hello from Singleton!");
-    }
-
-    public static void main(String[] args) {
-        Main.getInstance().showMessage();
-    }
+class Person {
+    private String name = "Unknown"; // private 변수 (외부 접근 불가)
 }
