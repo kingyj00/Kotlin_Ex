@@ -1,7 +1,15 @@
 class Person {
-    private String name = "Unknown"; // private 변수
+    private String name; // private 변수
 
-    public void setName(String name) { // Setter 제공 (쓰기 가능, 읽기 불가)
+    public Person(String name) { // 생성자
+        this.name = name;
+    }
+
+    public String getName() { // Getter
+        return name;
+    }
+
+    public void setName(String name) { // Setter
         this.name = name;
     }
 }
