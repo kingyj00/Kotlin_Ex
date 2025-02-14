@@ -1,10 +1,41 @@
-public class Main {
-    public static void main(String[] args) {
-        int result = compute(5);
-        System.out.println("Result: " + result);
+class Main {
+    String name;
+    int age;
+    double weight;
+    double salary;
+
+    public Main(String name, int age, double weight, double salary) {
+        this.name = name;
+        this.age = age;
+        this.weight = weight;
+        this.salary = salary;
     }
 
-    public static int compute(int x) {
-        return x * 2 + 10;
+    public void increaseAge(int years) {
+        this.age += years;
+    }
+
+    public void increaseWeight(double kg) {
+        this.weight += kg;
+    }
+
+    public void increaseSalary(double amount) {
+        this.salary += amount;
+    }
+
+    public String getInfo() {
+        return name + " is " + age + " years old, weighs " + weight + "kg, and earns $" + salary;
+    }
+
+    public static void main(String[] args) {
+        Main Main = new Main("Alice", 30, 55.0, 50000.0);
+
+        // with와 비슷한 방식으로 메서드 체이닝 사용
+        Main.increaseAge(5);
+        Main.increaseWeight(3.5);
+        Main.increaseSalary(10000);
+        String info = Main.getInfo();
+
+        System.out.println(info);
     }
 }
