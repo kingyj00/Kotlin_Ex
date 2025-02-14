@@ -1,18 +1,12 @@
 package com.ll
 
-class Person(
-    private var _name: String
-) {
+class Person(val name: String, val age: Int) {
+    fun introduce() {
+        println("Hi, I'm $name and I'm $age years old.")
+    }
+}
 
-    var name: String
-        get() {
-            if (_name.isEmpty()) {
-                throw IllegalStateException("이름이 설정되지 않았습니다.")
-            }
-            return _name
-        }
-        set(value) {
-            require(value.isNotEmpty()) { "이름은 비어 있을 수 없습니다." }
-            _name = value
-        }
+fun main() {
+    val person = Person("Alice", 25)
+    person.introduce()
 }
