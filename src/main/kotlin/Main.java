@@ -1,18 +1,12 @@
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.StandardCopyOption;
-
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         try {
-            copy("a.txt", "a_copy.txt");
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+            int result = 10 / 0; // 0으로 나누는 예외 발생
+            System.out.println("결과: " + result);
+        } catch (ArithmeticException e) { // 예외 처리
+            System.out.println("예외 발생: " + e.getMessage());
+        } finally {
+            System.out.println("이 코드는 항상 실행됩니다.");
         }
-    }
-
-    public static void copy(String source, String target) throws IOException {
-        Files.copy(new File(source).toPath(), new File(target).toPath(), StandardCopyOption.REPLACE_EXISTING);
     }
 }
