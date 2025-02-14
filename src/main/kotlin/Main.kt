@@ -1,5 +1,5 @@
 package com.ll
 
 class Person {
-    private val name: String = "Unknown" // private val (외부 접근 불가)
+    val name: String = "Unknown" // val 사용 (자동으로 Getter 생성)
 }
