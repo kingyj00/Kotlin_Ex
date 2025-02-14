@@ -1,41 +1,20 @@
 class Main {
-    String name;
-    int age;
-    double weight;
-    double salary;
+    private String value;
 
-    public Main(String name, int age, double weight, double salary) {
-        this.name = name;
-        this.age = age;
-        this.weight = weight;
-        this.salary = salary;
+    public void setValue(String value) {
+        this.value = value;
     }
 
-    public void increaseAge(int years) {
-        this.age += years;
-    }
-
-    public void increaseWeight(double kg) {
-        this.weight += kg;
-    }
-
-    public void increaseSalary(double amount) {
-        this.salary += amount;
-    }
-
-    public String getInfo() {
-        return name + " is " + age + " years old, weighs " + weight + "kg, and earns $" + salary;
+    public String getValue() {
+        if (value == null) {
+            throw new IllegalStateException("Value is not initialized");
+        }
+        return value;
     }
 
     public static void main(String[] args) {
-        Main Main = new Main("Alice", 30, 55.0, 50000.0);
-
-        // with와 비슷한 방식으로 메서드 체이닝 사용
-        Main.increaseAge(5);
-        Main.increaseWeight(3.5);
-        Main.increaseSalary(10000);
-        String info = Main.getInfo();
-
-        System.out.println(info);
+        Main example = new Main();
+        example.setValue("Hello, Kotlin!");
+        System.out.println(example.getValue());
     }
 }
