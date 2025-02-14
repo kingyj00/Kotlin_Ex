@@ -1,7 +1,7 @@
 class Person {
     private String name = "Unknown"; // private 변수
 
-    public String getName() { // Getter 제공 (읽기 가능, 변경 불가)
-        return name;
+    public void setName(String name) { // Setter 제공 (쓰기 가능, 읽기 불가)
+        this.name = name;
     }
 }
