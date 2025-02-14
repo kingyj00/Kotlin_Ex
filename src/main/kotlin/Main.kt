@@ -1,10 +1,12 @@
 package com.ll
 
-class Person(val name: String, val age: Int) {
-    constructor(name: String) : this(name, 0) // 주 생성자 호출
+class Person(val name: String, val age: Int, val country: String) {
+    constructor(name: String, age: Int) : this(name, age, "Unknown")
+    constructor(name: String) : this(name, 0)
 }
 
 fun main() {
-    val person1 = Person("Alice", 25)
-    val person2 = Person("Bob") // age는 기본값 0
+    val p1 = Person("Alice", 25, "USA")
+    val p2 = Person("Bob", 30) // country는 "Unknown"
+    val p3 = Person("Charlie") // age와 country 기본값 사용
 }
